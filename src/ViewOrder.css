@@ -1,0 +1,32 @@
+.viewOrder-section {
+  top: 140px;
+  position: relative;
+}
+
+.viewOrder-wrapper {
+  display: flex;
+  padding: 30px;
+  background-color: #fff;
+  height: max-content;
+  justify-content: center;
+  flex: 1;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.viewOrder-left {
+  flex: 0.6;
+}
+
+.viewOrder-right {
+  flex: 0.4;
+}
+
+.viewOrder-heading > h2 {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.viewOrder-heading {
+  margin-bottom: 50px;
+}

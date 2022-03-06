@@ -1,0 +1,24 @@
+.userRegister-section {
+  top: 140px;
+  position: relative;
+}
+
+.userRegister-wrapper {
+  display: flex;
+  padding: 30px;
+  background-color: #fff;
+  height: max-content;
+  justify-content: center;
+  flex: 1;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.form-card {
+  width: 650px;
+}
+
+form,
+.form-cardContent {
+  padding: 20px 30px;
+}

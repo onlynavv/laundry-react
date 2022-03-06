@@ -1,0 +1,44 @@
+.orderSuccess-section {
+  top: 140px;
+  position: relative;
+}
+
+.orderSuccess-wrapper {
+  display: flex;
+  padding: 30px;
+  background-color: #fff;
+  height: max-content;
+  justify-content: center;
+  flex: 1;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.orderSuccess-left {
+  flex: 0.7;
+}
+
+.orderSuccess-right {
+  flex: 0.3;
+}
+
+.orderSuccess-heading > h2 {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.orderSuccess-heading {
+  margin-bottom: 50px;
+}
+
+.orderSuccess-products-wrapper {
+  margin-top: 25px;
+}
+
+.orderSuccess-products-wrapper > * {
+  margin-bottom: 20px;
+}
+
+.order-cart-div > h3 {
+  margin-bottom: 15px;
+}

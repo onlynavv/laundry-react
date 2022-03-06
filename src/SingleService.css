@@ -1,0 +1,162 @@
+.singleService-section {
+  top: 140px;
+  position: relative;
+}
+
+.singleService-wrapper {
+  display: flex;
+  padding: 30px;
+  background-color: #fff;
+  height: max-content;
+  justify-content: center;
+  flex: 1;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.singleService-left {
+  flex: 0.7;
+}
+
+.singleService-right {
+  flex: 0.3;
+}
+
+.service-heading > h2 {
+  text-transform: capitalize;
+}
+
+.service-products-wrapper {
+  margin-top: 25px;
+}
+
+.product-info {
+  padding: 25px;
+  border-top: solid 1px #dbdbdb;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.product-rate-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-product,
+.laundryBag-btn {
+  background: #4baf8d;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding: 10px 35px;
+  width: fit-content;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.laundryBag-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.add-product:hover,
+.laundryBag-btn:hover {
+  cursor: pointer;
+}
+
+.catName-div {
+  background: #fdfcff !important;
+  padding: 15px;
+}
+
+.extrasProd-div {
+  background: #fff !important;
+  padding: 15px;
+  box-shadow: none !important;
+}
+
+.catName-nameDiv {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #46345c;
+}
+
+.category-div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.category-div > img {
+  width: 5%;
+}
+
+.service-heading {
+  margin-bottom: 50px;
+}
+
+.extras-heading {
+  margin-top: 25px;
+}
+
+.addOns-wrapper {
+  margin-top: 25px;
+}
+
+.goBack-btn {
+  position: relative;
+  left: 100px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  background: none;
+  outline: none;
+  border: none;
+  width: fit-content;
+  padding: 10px 25px;
+  font-size: 20px;
+}
+
+.goBack-btn:hover {
+  cursor: pointer;
+}
+
+.cart-size {
+  background-color: white;
+  color: #4baf8d;
+  font-weight: 800;
+  border-radius: 20px;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+.extras-rate-div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.extras-div > * {
+  margin-bottom: 15px;
+}
+
+.extras-head {
+  display: flex;
+  align-items: center;
+}
+
+.extras-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

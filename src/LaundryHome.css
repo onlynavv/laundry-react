@@ -1,0 +1,11 @@
+.laundryhome-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  top: 140px;
+  position: relative;
+}
+
+.laundryhome-wrapper {
+  gap: 15px;
+}

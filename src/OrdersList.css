@@ -1,0 +1,83 @@
+.orderslist {
+  padding: 30px 45px;
+  background: white;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  box-shadow: 1px 3px 3px 2px #d1d1d1;
+}
+
+.orderslist > * {
+  margin-bottom: 15px;
+}
+
+.orderlist-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 65px;
+}
+
+.pickup-date-div,
+.delivery-date-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dates-div {
+  flex: 0.4;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-view-details {
+  flex: 0.6;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.order-currentStatus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.current-status {
+  background: #4baf8d;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.current-status-update {
+  font-size: 14px;
+  color: #626262;
+}
+
+.laundry-Viewbtn {
+  background: #4baf8d;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding: 10px 35px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.laundry-Viewbtn:hover {
+  cursor: pointer;
+}
