@@ -36,11 +36,11 @@ const Navbar = () => {
                     <h3 onClick={()=>{history.push('/')}} className="logo">Laundry Clean</h3>
                     <div className='nav-container'>
                         <Link to='/'>Home</Link>
-                        <Link to="/register">User Register</Link>
+                        {(!user || !isUserAuthenticated) && <Link to="/register">User Register</Link>}
                         {isUserAuthenticated ? <p onClick={userLogout}>User Logout</p> : <Link to="/login">User Login</Link>}
                         <Link to="/myLaundry">My Laundry</Link>
                         {user.role === "admin" && <Link to="/services">Products</Link>}
-                        <Link to="/orders">Orders</Link>
+                        {user.role === "admin" && <Link to="/orders">Orders</Link>}
                         <Link to="/cart" className='navbar-cart'><ShoppingBagOutlinedIcon /> {cartCount}</Link>
                     </div>
                 </div>

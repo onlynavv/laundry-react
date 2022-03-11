@@ -13,6 +13,7 @@ import * as yup from 'yup';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import { useGlobalContext } from './context';
+import { useSnackbar } from 'notistack';
 
 
 const validateFormSchema = yup.object({
@@ -24,6 +25,8 @@ const validateFormSchema = yup.object({
 const SchedulePickup = () => {
 
     const history = useHistory()
+
+    const { enqueueSnackbar } = useSnackbar();
 
     const {cart, cartDispatch, pickupDetails, user, isUserAuthenticated, isUserLoggedIn} = useGlobalContext()
 
@@ -86,6 +89,11 @@ const SchedulePickup = () => {
 
     console.log(deliveryDays)
     console.log(moment(dateValue).add(deliveryDays, "day").format('dddd, MMMM Do YYYY'))
+
+    const handleDisabledBtn = (e) => {
+        e.preventDefault()
+        enqueueSnackbar("Login to proceed");
+    }
 
     const {handleBlur, handleChange, handleSubmit, errors, values, touched} = useFormik(
         {
@@ -191,9 +199,10 @@ const SchedulePickup = () => {
                         )}
                     </div>
                     <div className='form-control'>
-                        <button className='pickupBtn'><ShoppingBagOutlinedIcon /> Proceed to Checkout</button>
+                        {isUserAuthenticated && <button className='pickupBtn'><ShoppingBagOutlinedIcon /> Proceed to Checkout</button>}
                     </div>
                 </form>
+                {!isUserAuthenticated && <button onClick={(e)=>{handleDisabledBtn(e)}} className='pickupBtn disabledPickupBtn'><ShoppingBagOutlinedIcon /> Proceed to Checkout</button>}
             </div>
             <div className='schedulePickup-right'>
                 <div className='subtotal-div'>

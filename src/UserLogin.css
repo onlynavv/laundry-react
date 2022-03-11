@@ -22,3 +22,16 @@ form,
 .form-cardContent {
   padding: 20px 30px;
 }
+
+.demo-credentials-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.passwordLogin {
+  border: none;
+  border-bottom: solid 1px black;
+  outline: none;
+  height: 30px;
+}

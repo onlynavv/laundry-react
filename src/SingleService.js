@@ -8,12 +8,15 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useGlobalContext } from './context';
 import IconButton from '@mui/material/IconButton';
+import { useSnackbar } from 'notistack';
 
 const SingleService = () => {
 
     const {id} = useParams()
 
     const history = useHistory()
+
+    const { enqueueSnackbar } = useSnackbar();
 
     const {cart, cartDispatch, user, isUserAuthenticated, isUserLoggedIn} = useGlobalContext()
 
@@ -104,18 +107,20 @@ const SingleService = () => {
         setExtrasExpanded(isExpanded ? panel : false);
   };
 
-  const addToCart = (cartItem) => {
+  const addToCart = (cartItem, variant) => {
     console.log({...cartItem, extrasSelected})
+    enqueueSnackbar(`${cartItem.name} added`, { variant });
     cartDispatch({type:"ADD_TO_CART", payload:{...cartItem, extrasSelected}})
     setExtrasSelected([])
   }
 
-  const handleExtrasChange = (e, serviceName, catName, productName) => {
+  const handleExtrasChange = (e, serviceName, catName, productName, variant) => {
     let extrasValue
     if(e.target.checked){
         extrasValue = extrasList.find((item)=>{
             return item.name === e.target.value
         })
+        enqueueSnackbar(`${extrasValue.name} added`, { variant });
         setExtrasSelected([...extrasSelected, {...extrasValue, serviceName, catName, productName}])
     }else{
         const newValue = extrasSelected.filter((item)=>{return item.name !== e.target.value})
@@ -165,7 +170,7 @@ const SingleService = () => {
                                         <h3>{name}</h3>
                                         <div className='product-rate-div'>
                                             <p>₹ {rate} / pc</p>
-                                            <button className='add-product' onClick={()=>addToCart({_id, name, rate, serviceName, catName})}>Add</button>
+                                            <button className='add-product' onClick={()=>addToCart({_id, name, rate, serviceName, catName},"success")}>Add</button>
                                         </div>
                                         <div className='extras-div'>
                                             <Accordion key={product._id} expanded={extrasExpanded === `panel${product._id}`} className="extrasProd-div" onChange={handleExtrasAccordionChange(`panel${product._id}`)}>
@@ -181,7 +186,7 @@ const SingleService = () => {
                                                 return(
                                                     <div key={index} className="product-info">
                                                     <div className='extras-rate-div'>
-                                                        <input type="checkbox" className="form-check-input" id={extras.name+"-"+product.name} name={extras.name} value={extras.name} onChange={(e)=>handleExtrasChange(e, serviceName, catName, productName)}></input>
+                                                        <input type="checkbox" className="form-check-input" id={extras.name+"-"+product.name} name={extras.name} value={extras.name} onChange={(e)=>handleExtrasChange(e, serviceName, catName, productName, "success")}></input>
                                                         <label htmlFor={extras.name+"-"+product.name} className="form-check-label">{extras.name} . ₹ {extras.rate}</label>
                                                     </div>
                                                     </div>

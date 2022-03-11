@@ -70,3 +70,7 @@ form {
   color: #46345c;
   font-weight: 600;
 }
+
+.disabledPickupBtn {
+  background: #a5a5a5 !important;
+}
