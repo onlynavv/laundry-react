@@ -70,6 +70,13 @@ export const cartReducer = (state,action) => {
             pickupDetails: [action.payload]
         }
 
+        case "CLEAR_CART":
+            return{
+                ...state,
+                cart:[],
+                pickupDetails:[]
+            }
+
 
         default:
             return state

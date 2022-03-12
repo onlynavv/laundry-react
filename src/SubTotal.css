@@ -46,3 +46,34 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
+.test-cred-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-cred {
+  width: fit-content;
+  padding: 10px 15px;
+  background: #46345c;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.show-cred:hover {
+  cursor: pointer;
+}
+
+.test-cred {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cred-left > input,
+.cred-right > input {
+  outline: none;
+  padding: 5px;
+  margin-top: 5px;
+}
