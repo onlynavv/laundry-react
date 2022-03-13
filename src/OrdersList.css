@@ -41,6 +41,9 @@
   flex: 0.6;
   display: flex;
   justify-content: flex-end;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
 }
 
 .order-currentStatus {
@@ -64,20 +67,26 @@
   color: #626262;
 }
 
-.laundry-Viewbtn {
+.laundry-Viewbtn,
+.laundry-cancelBtn {
   background: #4baf8d;
   color: white;
   border: none;
   outline: none;
   border-radius: 7px;
   padding: 10px 35px;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 170px;
+  justify-content: center;
   font-weight: 600;
   display: flex;
   align-items: center;
 }
 
-.laundry-Viewbtn:hover {
+.laundry-cancelBtn {
+  background: #46345c;
+}
+
+.laundry-Viewbtn:hover,
+.laundry-cancelBtn:hover {
   cursor: pointer;
 }

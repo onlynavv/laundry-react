@@ -37,7 +37,7 @@ const MyLaundry = () => {
 
     useEffect(()=>{
         getUserOrders()
-    }, [])
+    }, [user])
 
     const handleTabChange = (event, newValue) => {
       setTabValue(newValue)
@@ -74,7 +74,7 @@ const MyLaundry = () => {
                             <TabPanel value="1">
                                 <h3>Active Orders</h3>
                                 {activeOrders?.length > 0 && activeOrders.map((item)=>{
-                                    return <OrdersList key={item._id} item={item} />
+                                    return <OrdersList key={item._id} item={item} getUserOrders={getUserOrders} />
                                 })}
                             </TabPanel>
                             <TabPanel value="2">
